@@ -1,0 +1,20 @@
+body {
+  --global-font-color: white;
+  --accent: #ce0269;
+  --accent-disabled: #404040;
+  --transaction-text-color: #ce8f02;
+
+  margin: 0;
+  padding: 170px 100px 0 80px;
+  height: 80vh;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--global-font-color);
+}
+
+#background-shape {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 50px;
+  height: 48vw;
+}
