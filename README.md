@@ -1,3 +1,6 @@
+## To start the app
+Run docker-compose, it will listen on port 5000
+
 ## Short Description
 Develop the note dispenser logic of an ATM.
 Details
