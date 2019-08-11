@@ -98,7 +98,6 @@ def withdraw(amount, bills):
                 return res
 
     else:
-        bill_20000 = [bill for bill in bills if bill.value == 2000][0]
         bill_10000 = [bill for bill in bills if bill.value == 10000][0]
         bill_5000 = [bill for bill in bills if bill.value == 5000][0]
         bill_2000 = [bill for bill in bills if bill.value == 2000][0]
@@ -130,7 +129,7 @@ def withdraw(amount, bills):
                 res['5000'] = 2
 
         elif amount % 2000 == 0:
-            if bill_20000.quantity >= amount / 2000:
+            if bill_2000.quantity >= amount / 2000:
                 res['is_success'] = True
                 res['2000'] = amount / 2000
 
