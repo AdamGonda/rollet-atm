@@ -62,7 +62,7 @@ def withdraw():
         if withdraw_action['is_success']:
             for key, value in withdraw_action.items():
                 if str(key).isdigit():
-                    bill = list(filter(lambda x: x.value == int(key), bills))[0]
+                    bill = [bill for bill in bills if bill.value == int(key)][0]
                     bill.quantity = bill.quantity - value
 
             add_transaction_to_db_session(time, amount, SUCCESS, db)
