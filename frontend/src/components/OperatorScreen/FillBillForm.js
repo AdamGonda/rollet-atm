@@ -51,8 +51,10 @@ const FillBillForm = ({ handleSubmit, pristine, submitting }) => {
 }
 
 const validations = [
-  value => (value && isNaN(Number(value)) ? 'Must be positive number' : undefined),
-  value => (value && value < 0 ? 'Must be positive number' : undefined)
+    value => (value && isNaN(Number(value)) ? 'Must be positive integer' : undefined),
+    value => (value && value < 0 ? 'Must be positive integer' : undefined),
+    value => (value && value.indexOf(',') !== -1 ? 'Must be positive integer' : undefined),
+    value => (value && value.indexOf('.') !== -1 ? 'Must be positive integer' : undefined),
 ]
 
 const renderField = ({
